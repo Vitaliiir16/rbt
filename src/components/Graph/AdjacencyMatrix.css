@@ -1,0 +1,25 @@
+.adjacency-matrix {
+  margin-top: 20px;
+}
+
+.adjacency-matrix table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.adjacency-matrix th,
+.adjacency-matrix td {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.zero-cell {
+  background-color: red;
+  color: white;
+}
+
+.one-cell {
+  background-color: green;
+  color: white;
+}

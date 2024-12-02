@@ -1,0 +1,17 @@
+.edge-list {
+    margin-top: 20px;
+    text-align: left;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .edge-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .edge-list li {
+    margin: 5px 0;
+  }
+  

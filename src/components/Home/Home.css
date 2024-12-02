@@ -1,0 +1,25 @@
+.home-container {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .sections {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .section {
+    margin: 0 50px;
+  }
+  
+  .start-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  footer {
+    margin-top: 100px;
+  }
+  
