@@ -1,19 +1,16 @@
-// Визначаємо NIL як порожній об'єкт
 const NIL = {};
 
-// Клас Node
 class Node {
   constructor(value) {
-    this.id = Math.random().toString(36).substr(2, 9); // Унікальний ID
+    this.id = Math.random().toString(36).substr(2, 9);
     this.value = value;
-    this.color = 'red'; // Нові вузли завжди червоні
+    this.color = 'red';
     this.left = NIL;
     this.right = NIL;
     this.parent = NIL;
   }
 }
 
-// Ініціалізуємо NIL
 NIL.id = null;
 NIL.value = null;
 NIL.color = 'black';
@@ -21,7 +18,6 @@ NIL.left = null;
 NIL.right = null;
 NIL.parent = null;
 
-// Функція вставки вузла
 export function insertNode(root, value) {
   const newNode = new Node(value);
 
@@ -55,7 +51,6 @@ export function insertNode(root, value) {
   return root;
 }
 
-// Функція для балансування після вставки
 function fixInsert(root, k) {
   while (k.parent.color === 'red') {
     if (k.parent === k.parent.parent.left) {
@@ -96,7 +91,6 @@ function fixInsert(root, k) {
   return root;
 }
 
-// Функція видалення вузла
 export function deleteNode(root, value) {
   let z = searchNode(root, value);
   if (z === NIL || z === null) return root;
@@ -135,7 +129,6 @@ export function deleteNode(root, value) {
   return root;
 }
 
-// Функція для заміни одного піддерева іншим
 function transplant(root, u, v) {
   if (u.parent === NIL || u.parent === null) {
     root = v;
@@ -148,7 +141,6 @@ function transplant(root, u, v) {
   return root;
 }
 
-// Функція для балансування після видалення
 function fixDelete(root, x) {
   while (x !== root && x.color === 'black') {
     if (x === x.parent.left) {
@@ -205,7 +197,6 @@ function fixDelete(root, x) {
   return root;
 }
 
-// Функція для пошуку мінімального вузла
 function treeMinimum(x) {
   while (x.left !== NIL) {
     x = x.left;
@@ -213,7 +204,6 @@ function treeMinimum(x) {
   return x;
 }
 
-// Функція пошуку вузла
 export function searchNode(root, value) {
   let current = root;
   while (current !== NIL && current !== null) {
@@ -228,7 +218,6 @@ export function searchNode(root, value) {
   return null;
 }
 
-// Функція лівого повороту
 function leftRotate(root, x) {
   let y = x.right;
   x.right = y.left;
@@ -248,7 +237,6 @@ function leftRotate(root, x) {
   return root;
 }
 
-// Функція правого повороту
 function rightRotate(root, y) {
   let x = y.left;
   y.left = x.right;
@@ -268,5 +256,4 @@ function rightRotate(root, y) {
   return root;
 }
 
-// Експортуємо необхідні функції та NIL
 export { NIL };

@@ -1,36 +1,41 @@
 .graph-container {
-  text-align: center;
   padding: 20px;
-}
-
-.graph-area {
-  width: 800px;
-  height: 600px;
-  margin: 0 auto;
-  border: 1px solid #ccc;
-  position: relative;
+  text-align: center;
 }
 
 .controls {
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .controls button {
-  margin: 5px;
+  margin: 0 5px;
   padding: 10px 15px;
 }
 
+.controls .delay-control {
+  margin-top: 10px;
+}
+
+.controls .delay-control input {
+  width: 100px;
+  padding: 5px;
+  margin-left: 5px;
+}
+
 .representation-controls {
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .representation-controls button {
-  margin: 5px;
-  padding: 5px 10px;
+  margin: 0 5px;
+  padding: 10px 15px;
 }
 
-.adjacency-matrix,
-.adjacency-list,
-.edge-list {
-  margin-top: 20px;
+.current-node {
+  margin: 10px 0;
+}
+
+.current-stack {
+  margin: 20px 0;
+  font-weight: bold;
 }

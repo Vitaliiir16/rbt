@@ -1,7 +1,7 @@
 import React from 'react';
 import './AdjacencyMatrix.css';
 
-function AdjacencyMatrix({ nodes, edges }) {
+const AdjacencyMatrix = ({ nodes, edges }) => {
   const matrixSize = nodes.length;
   const matrix = Array(matrixSize)
     .fill(0)
@@ -10,11 +10,8 @@ function AdjacencyMatrix({ nodes, edges }) {
   edges.forEach((edge) => {
     const fromIndex = nodes.findIndex((node) => node.id === edge.from);
     const toIndex = nodes.findIndex((node) => node.id === edge.to);
-
     if (fromIndex !== -1 && toIndex !== -1) {
       matrix[fromIndex][toIndex] = 1;
-    } else {
-      console.warn(`Ребро з невідомими вершинами: ${edge.from} -> ${edge.to}`);
     }
   });
 
@@ -31,11 +28,14 @@ function AdjacencyMatrix({ nodes, edges }) {
           </tr>
         </thead>
         <tbody>
-          {nodes.map((node, i) => (
-            <tr key={node.id}>
-              <td>{node.label}</td>
-              {matrix[i].map((val, j) => (
-                <td key={j} className={val === 0 ? 'zero-cell' : 'one-cell'}>
+          {matrix.map((row, i) => (
+            <tr key={nodes[i].id}>
+              <td>{nodes[i].label}</td>
+              {row.map((val, j) => (
+                <td
+                  key={j}
+                  className={val === 0 ? 'zero-cell' : 'one-cell'}
+                >
                   {val}
                 </td>
               ))}
@@ -45,6 +45,6 @@ function AdjacencyMatrix({ nodes, edges }) {
       </table>
     </div>
   );
-}
+};
 
 export default AdjacencyMatrix;

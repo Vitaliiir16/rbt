@@ -1,0 +1,14 @@
+/* src/components/Graph/edgeList/EdgeList.css */
+
+.edge-list {
+  margin-top: 20px;
+}
+
+.edge-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.edge-list li {
+  padding: 5px 0;
+}

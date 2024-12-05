@@ -21,7 +21,7 @@ function Home() {
         </div>
       </div>
       <footer>
-        <p>Internet of Things 2022</p>
+        <p>Internet of Things 2024</p>
       </footer>
     </div>
   );

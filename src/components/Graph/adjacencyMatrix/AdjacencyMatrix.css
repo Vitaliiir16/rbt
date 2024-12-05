@@ -3,23 +3,22 @@
 }
 
 .adjacency-matrix table {
-  margin: 0 auto;
   border-collapse: collapse;
+  width: 100%;
 }
 
 .adjacency-matrix th,
 .adjacency-matrix td {
-  border: 1px solid #ccc;
-  padding: 5px 10px;
+  border: 1px solid #ddd;
+  padding: 8px;
   text-align: center;
 }
 
 .zero-cell {
-  background-color: red;
-  color: white;
+  background-color: #f2f2f2;
 }
 
 .one-cell {
-  background-color: green;
+  background-color: #4caf50;
   color: white;
 }
